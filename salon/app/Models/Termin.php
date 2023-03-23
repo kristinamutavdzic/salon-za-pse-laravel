@@ -9,11 +9,13 @@ class Termin extends Model
 {
     use HasFactory;
 
+    protected $table = 'termini';
+
     protected $fillable = [
-        'frizer_id',
-        'frizura_id',
         'datum', 
         'vreme',
+        'frizer_id',
+        'frizura_id',
     ];
 
     public function frizer()

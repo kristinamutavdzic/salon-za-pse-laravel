@@ -9,9 +9,10 @@ class Frizer extends Model
 {
     use HasFactory;
 
+    protected $table = 'frizeri';
+
     protected $fillable = [
-        'ime',
-        'prezime',
+        'imePrezime',
         'godine_iskustva', 
         'rang',
         'kontakt'
