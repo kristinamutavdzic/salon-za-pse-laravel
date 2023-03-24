@@ -24,8 +24,8 @@ class FrizerController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'imePrezime' => 'required',
-            'godine_iskustva' => 'required',
-            'rang' => 'required',
+            'godineIskustva' => 'required',
+            'rangFrizera' => 'required',
             'kontakt' => 'required',
         ]);
 
@@ -34,8 +34,8 @@ class FrizerController extends Controller
         }
 
         $frizer->imePrezime = $request->imePrezime;
-        $frizer->godine_iskustva = $request->godine_iskustva;
-        $frizer->rang = $request->rang;
+        $frizer->godineIskustva = $request->godineIskustva;
+        $frizer->rangFrizera = $request->rangFrizera;
         $frizer->kontakt = $request->kontakt;
 
         $frizer->save();
