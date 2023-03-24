@@ -19,8 +19,8 @@ class TerminFactory extends Factory
     public function definition(): array
     {
         return [
-            'datum' =>  $this->faker->date($format = 'Y-m-d', $max = 'now'),
-            'vreme' => $this->faker->time($format = 'H:i', $max = 'now'),
+            'datum' =>  $this->faker->date(),
+            'vreme' => $this->faker->time(),
             'frizer_id' => Frizer::factory(),
             'frizura_id' => Frizura::factory(),
         ];

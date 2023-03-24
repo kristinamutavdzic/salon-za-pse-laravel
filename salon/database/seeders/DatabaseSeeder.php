@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Database\Seeders\FrizerSeeder;
+use Database\Seeders\FrizuraSeeder;
+use Database\Seeders\TerminSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $FrizuraSeeder = new FrizuraSeeder;
+        $FrizuraSeeder->run();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $FrizerSeeder = new FrizerSeeder;
+        $FrizerSeeder->run();
+
+        $TerminSeeder = new TerminSeeder;
+        $TerminSeeder->run();
     }
 }

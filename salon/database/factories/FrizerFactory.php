@@ -19,7 +19,7 @@ class FrizerFactory extends Factory
         return [
             'imePrezime' => $this->faker->name(),
             'godineIskustva' => $this->faker->numberBetween($min = 1, $max = 20),
-            'rang' => $this->faker->numberBetween($min = 1, $max = 3),
+            'rangFrizera' => $this->faker->numberBetween($min = 1, $max = 3),
             'kontakt' => $this->faker->phoneNumber(),
         ];
     }

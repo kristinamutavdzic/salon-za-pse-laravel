@@ -19,7 +19,8 @@ class FrizuraFactory extends Factory
         return [
             'naziv' => $this->faker->randomElement($array = array('Izlozbeno sisanje', 'Kratko sisanje', 'Srednje sisanje')),
             'vreme' => $this->faker->numberBetween($min = 15, $max = 90),
-            'tezinaFrizure' => $this->faker->randomElement($array = array('Lako', 'Srednje', 'Tesko')),
+            'tezinaFrizure' => $this->faker->numberBetween($min = 1, $max = 3),
+            'cena' => $this->faker->numberBetween($min = 500, $max = 2000),
 
         ];
     }
