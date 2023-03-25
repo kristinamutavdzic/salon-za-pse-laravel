@@ -43,7 +43,7 @@ class FrizerController extends Controller
         return response()->json(['Uspešno izmenjen frizer!', new FrizerResource($frizer)]);
     }
 
-    public function destroy( $frizer)
+    public function destroy( Frizer $frizer)
     {
         $frizer->delete();
         return response()->json('Uspešno obrisan frizer!');
